@@ -12,7 +12,6 @@ const Bottombar = () => {
                     throw new Error('Failed to fetch data');
                 }
                 const data = await response.json();
-                console.log("API Data:", data);
                 setArr(data); // Update the state with the fetched data
             } catch (error) {
                 console.error('Error fetching data:', error);
