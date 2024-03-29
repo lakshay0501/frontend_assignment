@@ -31,7 +31,7 @@ const Sidebar = () => {
              setisopen(!isopen);
            }}><FontAwesomeIcon icon={faBars} className='cursor-pointer px-4' /></div>
         </div>
-        <div className='hidden md:block'>
+        <div className={`hidden md:block ${isopen} ? block:hidden`} >
         <div className='bg bg-gray-400 flex items-center m-2 mt-6'>
             <FontAwesomeIcon icon={faMagnifyingGlass} className='mr-2 ml-2 '></FontAwesomeIcon>
             <div>Search</div>
