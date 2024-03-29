@@ -14,11 +14,9 @@ const GraphComponent = () => {
                     throw new Error('Failed to fetch data');
                 }
                 const json = await response.json();
-                console.log("json", json);
+                
                 const arr = json.data?.map(item => item.Population);
                 const labelsArr = json.data?.map(item => item.Year);
-                console.log("arr", arr);
-                console.log("labelsArr", labelsArr);
                 if (arr && labelsArr) {
                     arr.reverse();
                     labelsArr.reverse();
@@ -55,7 +53,6 @@ const GraphComponent = () => {
     return (
         <div className='ml-8'>
             <h2>Population Over Time</h2>
-            {console.log("line",chartData)}
             {error ? (
                 <div>Error: {error}</div> // Render error message if there's an error
             ) : 
